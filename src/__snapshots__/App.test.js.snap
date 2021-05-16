@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="wrapper"
+>
+  <div
+    className="navbar"
+  >
+    <a
+      aria-current="page"
+      className="navbarItem active"
+      href="/"
+      onClick={[Function]}
+      style={Object {}}
+    >
+      Home
+    </a>
+    <a
+      aria-current={null}
+      className="navbarItem"
+      href="/unitsPage"
+      onClick={[Function]}
+    >
+      Units
+    </a>
+  </div>
+  <div
+    className="homePageContainer"
+  >
+    <div
+      className="homePageTitleName"
+    >
+      Home Page
+    </div>
+    <div
+      className="homePageImageBox"
+    >
+      <img
+        alt="Age of Empires Img"
+        src="age_of_empires2_the_age_of_kings.jpg"
+      />
+    </div>
+  </div>
+</div>
+`;
