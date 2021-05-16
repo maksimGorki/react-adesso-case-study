@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import "./css/style.css";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+
+import Navbar from "./components/Navbar";
+import HomePage from "./components/HomePage";
+import UnitsPage from "./components/UnitsPage";
+import UnitDetailPage from "./components/UnitDetailPage";
+
+const actionTypes = {
+  fetchData: "FETCH_DATA",
+  filterData: "FILTER_DATA",
+};
 
 function App() {
+  const dispatch = useDispatch();
+
+  const url = "data/age-of-empires-units.json";
+  useEffect(() => {
+    dispatch({ type: actionTypes.fetchData, url: url });
+  }, [url, dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="wrapper">
+        <Navbar />
+        <Switch>
+          <Route exact strict path="/" component={HomePage} />
+          <Route exact strict path="/unitsPage" component={UnitsPage} />
+          <Route
+            exact
+            strict
+            path="/unitDetailPage/:unitname"
+            component={UnitDetailPage}
+          />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

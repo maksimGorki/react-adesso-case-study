@@ -1,0 +1,92 @@
+%border-box-page-style {
+  border: 3px solid rgb(88, 87, 87);
+}
+
+%border-box-button-style {
+  cursor: pointer;
+  padding: 0.2rem;
+  border: 1px solid rgb(88, 87, 87);
+  &:hover {
+    background-color: rgb(180, 178, 178);
+  }
+}
+
+%border-box-item-style {
+  cursor: pointer;
+  padding: 0.2rem;
+  border: 1px solid rgb(88, 87, 87);
+}
+
+%border-box-detail-style {
+  padding: 0.2rem;
+  border: 1px solid rgb(88, 87, 87);
+}
+
+%checkbox-style {
+  width: 13px;
+  height: 13px;
+  border: 1px solid rgb(88, 87, 87);
+}
+
+%flexbox-col-start-stretch {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+%flexbox-col-start-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+%flexbox-col-start-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+%flexbox-row-start-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+%flexbox-row-start-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+%flexbox-row-end-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+%flexbox-row-center-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+%page-header-font-style {
+  font-family: $font-stack;
+  font-style: normal;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+%page-sub-header-font-style {
+  font-family: $font-stack;
+  font-style: normal;
+  font-size: large;
+  font-weight: 700;
+}
